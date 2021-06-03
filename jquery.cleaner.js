@@ -30,18 +30,20 @@ jQuery(function($) {
             });
     });
 
-    $("img").each(function() {
-        let imgWidth = $(this).width();
-        let imgHeight = $(this).height();
+    let images = $("img");
+    for(let i = 0; i < images.length; i++) {
+        let image = images[i];
+        let imgWidth = $(image).width();
+        let imgHeight = $(image).height();
         if(imgWidth && imgHeight) {
             let newImage = $("<div>");
-            for(let i = 0; i < this.attributes.length; i++) {
-                let attr = this.attributes[i];
+            for(let i = 0; i < image.attributes.length; i++) {
+                let attr = image.attributes[i];
                 if(!['src'].includes(attr.name)) {
                     newImage.attr(attr.name, attr.value);    
                 }
             }
-            let imgAttrSrc = $(this).attr("src");
+            let imgAttrSrc = $(image).attr("src");
             newImage.css({
                 'background-image': `url("${imgAttrSrc}")`,
                 'background-repeat': 'no-repeat',
@@ -50,9 +52,13 @@ jQuery(function($) {
                 'height': imgHeight,
                 'display': 'inline-block'
             });
-            $(this).after(newImage);
-            $(this).remove();
+            $(image).after(newImage);
+            $(image).remove();
         }
+    }
+
+    $("img").each(function() {
+        
     });
 
     $("script").remove();
