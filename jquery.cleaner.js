@@ -57,9 +57,5 @@ jQuery(function($) {
         }
     }
 
-    $("img").each(function() {
-        
-    });
-
     $("script").remove();
 });
