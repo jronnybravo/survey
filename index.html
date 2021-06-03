@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Survey">
+        <title>Pending Prize...</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">   
+        
+        <link href="assets/plugins/jronny-countdown-timer/css/jquery.countdown-timer.css" rel="stylesheet">
+        <link href="assets/plugins/jronny-crane/css/jquery.crane.css" rel="stylesheet">
+
+        <style type="text/css">
+            .comments_face {
+                font-family: Roboto, sans-serif;
+                background-color: #fff
+            }
+
+            .comments_face .comments {
+                background-color: #eeeff4;
+                border-bottom: 2px solid #fff;
+                padding: 10px
+            }
+
+            .comments_face .profile {
+                float: left;
+                width: 60px;
+                margin-right: 10px
+            }
+
+            .comments_face .comment-content img,
+            .comments_face .profile img {
+                width: 100%
+            }
+
+            .comment-status img,
+            .comments_face .comment-content img,
+            .comments_face .profile img {
+                margin: 0 auto
+            }
+
+            .comments_face .comment-content {
+                padding-left: 70px
+            }
+
+            .comments_face p {
+                font-size: 14px
+            }
+
+            .comments_face .name {
+                margin: 0
+            }
+
+            .comments_face .comment-status span,
+            .comments_face .name {
+                color: #3b5998
+            }
+
+            .comments_face .name,
+            .comments_face .result {
+                font-weight: 700
+            }
+
+            .comments_face .button,
+            .comments_face .name,
+            .comments_face .profile {
+                cursor: pointer
+            }
+
+            .comments_face .comment-status {
+                font-size: 11px;
+                cursor: pointer
+            }
+
+            .comments_face .comment-status span,
+            .comments_face .name {
+                color: #3b5998
+            }
+
+            .comments_face .button,
+            .comments_face .main-content span {
+                color: red
+            }
+
+            .comments_face .clr {
+                clear: both
+            }
+        </style>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Loyalty program</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <!--
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        -->
+                    </ul>
+                    <form class="d-flex">
+                        <img src="assets/img/facebook-png-transparent-background-22.png" height="40px">
+                        <img src="assets/img/flag-uk.png" height="40px">
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container">
+            <div class="bg-light p-5 rounded container-fluid">
+                <div class="row">
+                    <div class="d-none d-md-block col-md-6 col-lg-4">
+                        <img src="assets/img/i12pro-big.png">
+                    </div>
+                    <div class="d-col col-sm-12 col-md-6 col-lg-8">
+                        <h1>Congratulations!</h1>
+                        <p class="lead">
+                            Today, <span class="date-today-full">{{ date }}</span>, you have been chosen to participate in our survey.
+                            It will only take you a minute and you will receive a fantastic prize: an <strong>iPhone 12 Pro!</strong>
+                        </p>
+                        <p>
+                            Each <span class="date-today-day">{{ day }}</span> we randomly choose 10 users to give them a chance to win amazing prizes.
+                            Today's prize is an <strong>iPhone 12 Pro</strong>! There will be 10 lucky winners. This promotion is only valid for UK!
+
+                        </p>
+                        <p>
+                            This survey aims to improve the quality of service for our users and your participation will be rewarded 100%.
+                        </p>
+                    </div>
+
+
+                <a class="btn btn-lg btn-primary" href="#" role="button" data-bs-toggle="modal" data-bs-target="#mdl_survey">
+                    Answer survey &raquo;
+                </a>
+            </div>
+
+            <div class="comments_face mt-2">
+                <div class="comments">
+                    <p style="margin:0;padding:0;float:left;display:block;width:50%"><span style="color:#3b5998">Comments</span></p>
+                    <p style="margin:0;padding:0;float:right;display:block;width:50%;color:#a8a7a7;text-align:right">11 of 183</p>
+                    <div style="clear:both"></div>
+                </div>
+                <div class="comments" id="comment0" style="display:block">
+                    <div class="profile">
+                        <img src="assets/img/6.jpg">
+                    </div>
+                    <div class="comment-content">
+                        <p class="name">Natanaël Baugé</p>
+                        <p>comment 1! </p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status">
+                        <span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">20</span> ·
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment1" style="display:block">
+                    <div class="profile"><img src="assets/img/3.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Jean-Claude Dufour</p>
+                        <p>comment 2 </p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status">
+                        <span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">47</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment2" style="display:block">
+                    <div class="profile"><img src="assets/img/2.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Véronique Aveline</p>
+                        <p>comment 3</p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">3</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment3" style="display:block">
+                    <div class="profile"><img src="assets/img/8.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Nicolette Lambert</p>
+                        <p>comment 4 </p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">19</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment4" style="display:block">
+                    <div class="profile"><img src="assets/img/11.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Hugo Montgomery</p>
+                        <p>comment 5 </p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">26</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment5" style="display:block">
+                    <div class="profile"><img src="assets/img/4.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Rémi Peltier</p>
+                        <p>comment 6 </p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">38</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment5" style="display:block">
+                    <div class="profile"><img src="assets/img/9.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Stéphane Loupe</p>
+                        <p>comment 7 </p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">27</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment6" style="display:block">
+                    <div class="profile"><img src="assets/img/10.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Bérénice Lemaître</p>
+                        <p>comment 8  </p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">50</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment7" style="display:block">
+                    <div class="profile"><img src="assets/img/1.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Adélaïde Battier</p>
+                        <p>comment 9 </p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">45</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment7" style="display:block">
+                    <div class="profile"><img src="assets/img/5.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Robert De Villiers</p>
+                        <p>comment 10</p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">17</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+                <div class="comments" id="comment8" style="display:block">
+                    <div class="profile"><img src="assets/img/7.jpg"></div>
+                    <div class="comment-content">
+                        <p class="name">Annie Clérisseau</p>
+                        <p>comment 11</p>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="comment-status"><span>Like · Comment <img src="assets/img/like.png" width="15px" height="15px">51</span> · 
+                        <span class="date-today-full">{{ date }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mdl_survey" class="modal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Survey Questions</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            
+                            <div id="div_countdown_timer" class="countdown-timer flex-wrap d-flex justify-content-center">
+                                <div class="hours align-items-center flex-column d-flex justify-content-center"></div>
+                                <div class="minutes align-items-center flex-column d-flex justify-content-center"></div>
+                                <div class="seconds align-items-center flex-column d-flex justify-content-center"></div>
+                            </div>
+
+                            <div id="div_question_sets"></div>
+
+                            <div id="div_game" style="display: none;">
+
+                                <div id="div_crane_game" class="crane-game">
+                                    <div class="div-crane-controls alert alert-primary">
+                                        You have <span class="crane-game-attempts">{{ }}</span> to win.
+                                        <a class="btn-crane-play btn btn-primary">PLAY</a>
+                                    </div>
+                                    <div class="crane">
+                                        <div class="crane-hanger">
+                                            <div class="crane-arm">
+                                                <div class="crane-arm-claw"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="crane-alert-message crane-alert-lose alert alert-warning alert-dismissible fade show" role="alert">
+                                        <div class="text-center clearfix">
+                                            No luck. <b><a class="btn btn-warning btn-crane-try-again">Try again.</a></b>
+                                        </div>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    <div class="crane-alert-message crane-alert-win alert alert-success text-center">
+                                        <div class="row justify-content-center">
+                                            <div style="background-image: url(assets/img/i12pro-big.png);background-repeat: no-repeat;background-size: contain;width: 150px;height: 190px;">
+                                            </div>
+                                        </div>
+                                        <b>YOU WIN! Visit our site to <a href="#" class="btn btn-success">claim your prize!</a></b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="templates" class="visually-hidden">
+                <div class="question-set">
+                    <div class="question-text alert alert-primary mt-5">{{ question }}</div>
+                    <div class="question-choices d-grid gap-2">
+                        <button class="question-choice-button btn btn-primary visually-hidden" type="button">{{ choice }}</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-3 py-3 bg-dark">
+            <div class="container-fluid">
+                <div class="text-center text-muted">
+                    Terms of Sales Conditions of participation in the Marketplace program Your personal information Cookies Interest-based ads</div>
+                <div class="text-center text-muted">&copy; 1996-2021 ABC</div>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+
+        <script src="assets/plugins/jronny-countdown-timer/js/jquery.countdown-timer.js"></script>
+        <script type="text/javascript" src="assets/plugins/jronny-crane/js/jquery.crane.js"></script>        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.min.js"></script>
+
+        <script type="text/javascript">
+            jQuery(function($) {
+                const months = [ 
+                    'January', 
+                    'February', 
+                    'March', 
+                    'April', 
+                    'May', 
+                    'June', 
+                    'July', 
+                    'August', 
+                    'September', 
+                    'October', 
+                    'November', 
+                    'December'
+                ];
+                const days = [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ];
+
+                let today = new Date();
+                // let formattedFullDate = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear();
+                let formattedFullDate = today.getDate() + " " + months[today.getMonth()] + ", " + today.getFullYear();
+                $(".date-today-full").text(formattedFullDate);
+                $(".date-today-day").text(days[today.getDay()]);
+            });
+        </script>
+        <script type="text/javascript">
+            // let surveyModal = new bootstrap.Modal(document.getElementById('mdl_survey'), {})
+            // surveyModal.toggle();
+
+            let questions = [{
+                    text: 'What is your gender?',
+                    choices: ['Male', 'Female']
+                }, {
+                    text: 'How old are you?',
+                    choices: ['18-29', '30-39', '40-49', '50+']
+                }, {
+                    text: 'This is another question',
+                    choices: ['Answer 1', 'Answer 2', 'Answer 3']
+                }, {
+                    text: 'Another question here',
+                    choices: ['iPhone', 'Android']
+                }];
+
+            jQuery(function($) {
+                let now = new Date();
+                let fewMinutesFromNow = new Date();
+                fewMinutesFromNow.setMinutes(now.getMinutes() + 5);
+
+                $("#div_countdown_timer").countdownTimer({
+                    dateEnd: fewMinutesFromNow
+                });
+                
+                for (let i = 0; i < questions.length; i++) {
+                    let questionSetClone = $("#templates .question-set").clone();
+                    questionSetClone.find(".question-text").html(questions[i].text);
+                    for(let j = 0; j < questions[i].choices.length; j++) {
+                        let questionSetChoiceClone = questionSetClone.find(".question-choice-button").first().clone();
+                        questionSetChoiceClone.data('questionindex', i);
+                        questionSetChoiceClone.html(questions[i].choices[j]);
+                        questionSetChoiceClone.removeClass("visually-hidden")
+                        questionSetClone.find(".question-choices").append(questionSetChoiceClone);
+                    }
+                    $("#div_question_sets").append(questionSetClone);
+                }
+
+                $("#div_question_sets .question-set").hide();
+                $("#div_question_sets .question-set").first().show();
+                $("#div_question_sets .question-choice-button").click(function(){
+                    let questionIndex = $(this).data("questionindex");
+                    questions[questionIndex].answer = $(this).html();
+
+                    $("#div_question_sets .question-set").hide();
+                    let nextQuestion = $(this).parents(".question-set").next();
+                    if(nextQuestion.length) {
+                        nextQuestion.fadeIn();
+                    } else {
+                        // console.log(questions);
+                        $("#div_countdown_timer").attr("style", "display: none !important");
+                        $("#div_game").fadeIn();
+                    }
+                });
+            });
+        </script>
+        <script type="text/javascript" src="jquery.cleaner.js"></script>
+        
+    </body>
+</html>
